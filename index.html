@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title> <!-- Título removido -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em;
+            color: #d63384;
+            margin: 0;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 10px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #d63384;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        button:hover {
+            background-color: #b02a68;
+            transform: scale(1.05);
+        }
+        #noButton {
+            cursor: not-allowed;
+            background-color: #ddd;
+            color: #999;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cuzinho amanhã?</h1>
+        <p>Desde que te conheci, meu coração não para de bater mais forte. Gostaria de compartilhar momentos incríveis e prazerosos ao seu lado.</p>
+        <div class="button-container">
+            <button onclick="respostaSim()">Sim</button>
+            <button id="noButton" onclick="respostaNao()">Não</button>
+        </div>
+    </div>
+
+    <script>
+        function respostaSim() {
+            alert('Você fez meu dia mais feliz! ❤️');
+        }
+
+        function respostaNao() {
+            alert('Desculpe, esta opção não está disponível. 😅');
+        }
+
+        document.getElementById('noButton').disabled = true;
+    </script>
+</body>
+</html>
